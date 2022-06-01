@@ -1,0 +1,39 @@
+<div class="content-data-employees">
+  <div class="table-content">  
+    <div class="button-content">
+      <button input-content__submit button (click)="buttonAddEmployee()">Añadir clientes</button>
+    </div>
+    <div id="load" *ngIf="load==true">
+      <p>Cargando...</p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Pagos</th>
+          <th>Adelantos</th>
+          <th>Multas</th>
+          <th>Por cobrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.name}}</td>
+          <td>{{employee.surname}}</td>
+          <td>{{employee.payments  | currency:'USD'}}</td>
+          <td>{{employee.advances  | currency:'USD'}}</td>
+          <td>{{employee.fines  | currency:'USD'}}</td>
+          <td>{{employee.receivable  | currency:'USD'}}</td>
+          <td class="edit-employee-button" [routerLink]="['edit-employee/', employee.id]">Mas detalles</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+<app-form-employee id="modal" (click)="closeModal($event)" *ngIf="modalSwitch==true" 
+  (cancelEvent)="onCancel($event)"
+  (addEmployeeEvent)="addEmployee($event)"></app-form-employee>

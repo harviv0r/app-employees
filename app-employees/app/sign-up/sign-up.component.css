@@ -1,0 +1,21 @@
+.sign-up-box {
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #000;
+  background-color: #75b3ff
+}
+
+form .two-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form .two-columns p {
+  width: 49%;
+}
+
+form .two-columns p:first-child {
+  margin-right: 2%;
+}

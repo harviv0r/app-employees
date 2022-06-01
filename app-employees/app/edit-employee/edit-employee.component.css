@@ -1,0 +1,22 @@
+.content-edit-employees {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-edit-employees h2 {
+  text-align: center;
+}
+
+.content-edit-employees a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.content-edit-employees a:hover {
+  border-bottom: 1px solid rgb(55, 182, 221);
+}

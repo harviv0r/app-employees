@@ -1,0 +1,92 @@
+.content-data-employees {
+  width: 100%;
+  height: auto;
+}
+
+table{
+  margin: 0 auto;
+  min-width: 950px!important;
+}
+
+.table-content {
+  margin:0 auto;
+  width: 950px;
+  height: 80%;
+}
+
+.table-content::-webkit-scrollbar {
+  display: none;
+}
+
+.table-content table th,
+td {
+  padding: 4px 0 4px 0;
+}
+
+.table-content table th {
+  text-align: left;
+}
+
+.table-content table td:last-of-type {
+  text-align: center;
+}
+
+
+
+
+.button-content {
+  text-align: right;
+  margin: 20px 10px 40px 20px;
+}
+
+.button-content button {
+  background-color: rgb(44, 99, 201);
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button-content button:hover {
+  background-color:rgb(58, 119, 233) ;
+}
+
+.table-content table {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc
+}
+
+.edit-employee-button {
+  font-weight: bold;
+}
+
+.edit-employee-button:hover {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(83, 133, 226);
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.664);
+  z-index: 2;
+  visibility: visible;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+
+#modal::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,40 @@
+<div class="container">
+  <nav class="navigation" [ngClass]="{'navigation-resize':isToggle==true}">
+    
+    <div class="content-menu">
+      <section class="nav-header">
+        <div class="button-toggle">
+          <button class="bars" (click)="toggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <h2 [ngClass]="{'h2-resize':isToggle==true}">Control</h2>
+      </section>
+      <section class="nav-content">
+        <h3 [ngClass]="{'h3-resize':isToggle==true}">PANEL</h3>
+        <ul>
+          <li routerLink="employees"><img src="assets/group.png">Empleados</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="nav-footer">
+      <h3 [ngClass]="{'h3-resize':isToggle==true}">ADMINISTRADOR</h3>
+      <div class="admin-info" [ngClass]="{'admin-info-resize':isToggle==true}">
+        <img src="assets/logo-login.png" alt="">{{nameCurrentAdmin}}
+      </div>
+      <div class="logout" [ngClass]="{'logout-resize':isToggle==true}">
+        <button (click)="onSubmit()">Salir</button>
+      </div>
+    </section>
+  </nav>
+
+  <section class="data-content" [ngClass]="{'data-content-resize':isToggle==true}">
+    <router-outlet></router-outlet>
+  </section>
+
+
+
+</div>

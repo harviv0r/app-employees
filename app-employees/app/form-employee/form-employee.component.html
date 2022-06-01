@@ -1,0 +1,62 @@
+
+
+<form class="add-form-modal" [formGroup]="employeeForm">
+
+  <section class="form-body">
+
+    <div id="load" *ngIf="load==true">
+      <p>Cargando...</p>
+    </div>
+    
+    <div class="input-content">
+      <p>
+        <label for="name">Nombres</label>
+        <input type="text" id="name" required formControlName="name">
+      </p>
+    </div>
+
+    <div class="input-content">
+      <p>
+        <label for="surname">Apellidos</label>
+        <input type="text" id="surname" required formControlName="surname">
+      </p>
+    </div>
+
+    <div class="input-content">
+      <label for="e-mail">E-mail</label>
+      <input type="email" id="e-mail" required formControlName="email">
+    </div>
+
+    <div class="input-content">
+      <label for="id-number">Número de Id</label>
+      <input type="number" id="id-number" required formControlName="numberId">
+    </div>
+
+    <div class="input-content">
+      <label for="advances">Avances</label>
+      <input type="number" id="advances" required formControlName="advances">
+    </div>
+
+    <div class="input-content">
+      <label for="payments">Pagos</label>
+      <input type="number" id="payments" required formControlName="payments">
+    </div>
+
+    <div class="input-content">
+      <label for="fines">Deudas</label>
+      <input type="number" id="fines" required formControlName="fines">
+    </div>
+
+    <div class="input-content">
+      <label for="receivable">Por cobrar</label>
+      <input type="number" id="receivable" required formControlName="receivable">
+    </div>
+
+    <div class="input-content__submit">
+      <button type="submit" (click)="cancelDelete()">{{cancelDeleteText}}</button>
+      <button type="submit" [disabled]="employeeForm.invalid" [ngClass]="{'disabled':employeeForm.invalid}"
+        (click)="addEdit()">{{addEditText}}</button>
+    </div>
+  </section>
+  
+</form>

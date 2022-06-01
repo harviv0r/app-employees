@@ -1,0 +1,45 @@
+<div class="sign-in-box">
+
+  <img src="assets/logo-login.png" alt="">
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="singInForm">
+    <h2>Inicia Sesión</h2>
+    <section>
+      <div class="input-content">
+        <label for="email">
+          E-mail
+        </label>
+        <input type="email" id="email" name="email" required formControlName="email">
+        <span class="error-message"
+          *ngIf="singInForm.controls['email'].errors && singInForm.controls['email'].touched">*Ingrese su correo
+          correctamente</span>
+      </div>
+      <div class="input-content">
+        <label for="password">
+          Password
+        </label>
+        <input type="password" id="password" name="password" required formControlName="password">
+        <span class="error-message"
+          *ngIf="singInForm.controls['password'].errors && singInForm.controls['password'].touched">*Ingrese
+          conrrectamente su contraseña</span>
+      </div>
+      <div class="input-content__submit">
+        <button type="submit" [disabled]="singInForm.invalid" [ngClass]="{'disabled': singInForm.invalid}">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Ingresar</button>
+      </div>
+
+    </section>
+
+    <section class="form-footer">
+      <p>
+        ¿No tienes una cuenta?
+        <a routerLink="/sign-up">Regístrate</a>
+      </p>
+    </section>
+  </form>
+
+</div>

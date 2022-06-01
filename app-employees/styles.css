@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  overflow-y:scroll;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul{
+  list-style: none;
+}
+body {
+  flex-direction: column;
+  display: flex;
+  min-height: 100%;
+
+
+
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+.error-message{
+  color: #f00;
+}
+.disabled{
+  opacity: 0.6!important;
+  cursor: not-allowed!important;
+}
+
+
+
+
+/* for login pages only, sign in  and sign up*/
+
+a{
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(52, 78, 228);
+  text-decoration: underline;
+}
+a:hover{
+  color: rgb(7, 16, 71);
+  
+}
+
+form input{
+  width: 100%;  
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form .input-content{
+  margin: 20px 35px;
+  
+}
+span{
+  display: flex;
+}
+.form-footer{
+  padding: 30px 35px 30px 35px;
+}
+
+.input-content__submit{
+  width: 100%;
+  margin: 20px 0px;
+  text-align: center;
+
+}
+.input-content__submit button{
+  background-color: rgb(58, 119, 233);
+  border-radius: 10px;    
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  
+}
+
+form a {
+  margin-left: 5px;
+
+}
+
+form{
+  background-color: rgb(255, 255, 255);
+
+  margin: 0 auto;
+  width: 700px;   
+  box-shadow: 0 35px 68px 0 rgba(236, 239, 241, 0.473), inset 0px 0px 12px 2px  #5388ce;  
+  
+  border-radius: 30px; 
+  border: 1px solid #5388cec4;      
+}
+
+form h2{
+  text-align: center;
+  margin: 30px 0px 30px 0px;
+}
+
+#load{
+  margin: 10px;
+}

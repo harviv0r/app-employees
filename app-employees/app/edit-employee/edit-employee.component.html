@@ -1,0 +1,14 @@
+
+
+<div class="content-edit-employees">
+    <div>
+        <a routerLink="/dashboard/employees">←</a>
+        <h2>Editando datos de empleado</h2>
+        <div>    
+            <app-form-employee 
+            (editEmployeeEvent)="editEmployee($event)"
+            (deleteEvent)="deleteEmployee($event)" 
+            ></app-form-employee>
+        </div>
+    </div> 
+</div>

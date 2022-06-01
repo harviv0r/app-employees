@@ -1,0 +1,61 @@
+  /* main */
+  .sign-in-box {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8cc0ff;
+    padding: 40px 20px;
+  }
+
+  img {
+    position: relative;
+    border-radius: 150px;
+    width: 200px;
+    animation: pulse 4s;
+    transform: scale(1.7);
+    box-shadow: 0 35px 58px 0 rgba(255, 255, 255, 0.699), inset -5px -8px 16px #fafcff;
+
+    margin-right: 150px;
+  }
+
+  form {
+    width: 500px !important;
+    margin: 0px;
+  }
+
+  @keyframes pulse {
+    from {
+      transform: none;
+    }
+
+    50% {
+      transform: scale(1.7);
+    }
+
+    to {
+      transform: scale(1.7)
+    }
+  }
+
+
+  @media screen and (max-width:992px) {
+    img {
+      transition: 500ms;
+      width: 150px;
+      margin-right: 75px;
+    }
+
+    form {
+      transition: 500ms;
+      width: 400px !important;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    img {
+      transition: 500ms;
+      display: none;
+    }
+  }
